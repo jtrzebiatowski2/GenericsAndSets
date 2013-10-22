@@ -31,5 +31,31 @@ public class Startup {
 //        } else {
 //            System.out.println("The addresses are NOT equal");
 //        }
+        
+        List employees = new ArrayList();
+        
+        Employee e1 = new Employee("Justin", "Trzebiatowski", "391-4715-7415");
+        Employee e2 = new Employee("Darnell", "Hicks", "962-55-7887");
+        Employee e3 = new Employee("Albert", "Foxtrot", "447-01-2147");
+        Employee e4 = new Employee("Darnell", "Hicks", "962-55-7887");
+        
+        employees.add(e1);
+        employees.add(e2);
+        employees.add(e3);
+        employees.add(e4);
+        
+        System.out.print(employees.size());
+        
+        Employee testEmployee1 = (Employee)employees.get(1);
+        
+        System.out.println(testEmployee1.toString());
+        
+        for(Object e : employees){
+            
+        }
+        
+        
     }
+    
+   
 }
