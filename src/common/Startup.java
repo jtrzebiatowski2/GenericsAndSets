@@ -50,8 +50,8 @@ public class Startup {
         
         System.out.println(testEmployee1.toString());
         
-        for(Object e : employees){
-            
+        for(int i = 0; i < employees.size(); i++){
+            System.out.println(employees.get(i).toString());
         }
         
         
