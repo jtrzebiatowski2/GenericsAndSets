@@ -44,9 +44,12 @@ public class Startup {
         Employee e3 = new Employee("Albert", "Foxtrot", "447-01-2147");
         Employee e4 = new Employee("Darnell", "Hicks", "962-55-7887");
         
-        //Demonstrates the the overidden equals method works
+        //Demonstrates the the overidden equals() method works
         if(e2.equals(e4)){
             System.out.println("The employees are the same");
+        }
+        else{
+            System.out.println("The employees are different");
         }
         
         //Add the employee objects to the arrayList
