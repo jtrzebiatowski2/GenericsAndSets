@@ -34,7 +34,7 @@ public class Startup {
         
         List employees = new ArrayList();
         
-        Employee e1 = new Employee("Justin", "Trzebiatowski", "391-4715-7415");
+        Employee e1 = new Employee("Justin", "Trzebiatowski", "391-47-7415");
         Employee e2 = new Employee("Darnell", "Hicks", "962-55-7887");
         Employee e3 = new Employee("Albert", "Foxtrot", "447-01-2147");
         Employee e4 = new Employee("Darnell", "Hicks", "962-55-7887");
@@ -53,6 +53,18 @@ public class Startup {
         for(int i = 0; i < employees.size(); i++){
             System.out.println(employees.get(i).toString());
         }
+        
+        List <Employee> employees2 = new <Employee> ArrayList();
+        
+        employees2.add(e1);
+        employees2.add(e2);
+        employees2.add(e3);
+        employees2.add(e4);
+        
+        for(Employee e : employees2){
+            System.out.println(e.toString());
+        }
+        
         
         
     }
