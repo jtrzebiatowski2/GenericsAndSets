@@ -1,8 +1,10 @@
 package common;
 
 import java.util.*;
+import org.apache.commons.lang3.builder.CompareToBuilder;
 
-public class Employee {
+
+public class Employee implements Comparable, Comparator {
     private String lastName;
     private String firstName;
     private String ssn;
@@ -64,7 +66,20 @@ public class Employee {
     public String toString() {
         return "Employee{" + "lastName=" + lastName + ", firstName=" + firstName + ", ssn=" + ssn + '}';
     }
-    
-    
+
+    @Override
+    public int compareTo(Object other) {
+        
+        Employee e = (Employee)other;
+        
+        return new CompareToBuilder()
+                .append(this.ssn, e.ssn)
+                .toComparison();
+    }
+
+    @Override
+    public int compare(Object o1, Object o2) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
     
 }
