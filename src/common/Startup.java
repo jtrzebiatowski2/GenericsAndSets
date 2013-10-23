@@ -44,13 +44,18 @@ public class Startup {
         Employee e3 = new Employee("Albert", "Foxtrot", "447-01-2147");
         Employee e4 = new Employee("Darnell", "Hicks", "962-55-7887");
         
+        //Demonstrates the the overidden equals method works
+        if(e2.equals(e4)){
+            System.out.println("The employees are the same");
+        }
+        
         //Add the employee objects to the arrayList
         employees.add(e1);
         employees.add(e2);
         employees.add(e3);
         employees.add(e4);
         
-        System.out.print(employees.size());
+        System.out.println("The size of the arrayList is: " + employees.size());
         
         //Stores the employee object at index 1 of the employees array into the testEmployee1 variable
         Employee testEmployee1 = (Employee)employees.get(1);
@@ -84,7 +89,7 @@ public class Startup {
         employees2.addAll(employees3);
         
         //Verifies that the size of the new list is 3 elements
-        System.out.println(employees2.size());
+        System.out.println("The size of the arrayList is: " + employees2.size());
         
         
         //Create a new generalized hashMap to store the employee objects
