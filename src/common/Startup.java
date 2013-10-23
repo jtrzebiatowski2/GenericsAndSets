@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class Startup {
 
@@ -82,6 +85,35 @@ public class Startup {
         
         //Verifies that the size of the new list is 3 elements
         System.out.println(employees2.size());
+        
+        
+        //Create a new generalized hashMap to store the employee objects
+        
+        Map <String, Employee> employeeMap = new <String, Employee> HashMap();
+        
+        //Add the employee objects to the map using the String 'ssn' as the key
+        //Because the HashMap by default does not allow duplicate keys, the last employee added here
+        //will not be added to the HashMap
+        
+        employeeMap.put("391-47-7415", e1);
+        employeeMap.put("962-55-7887", e2);
+        employeeMap.put("447-01-2147", e3);
+        employeeMap.put("962-55-7887", e4);
+        
+        //Demonstrates how to retrieve an item from the map using that item's unique identifier or key in this case
+        //the ssn
+        System.out.println(employeeMap.get("447-01-2147").toString());
+        
+        //This creates a set of the employeeMap's unique keys using the keySet() function in the Map class.
+        //The set is then looped through and the object's values may be printed out to the console.
+        
+        Set <String> keys = employeeMap.keySet();
+        
+        for(String key : keys){
+            Employee found = employeeMap.get(key);
+            System.out.println(found.toString());
+        }
+        
         
         
     }
