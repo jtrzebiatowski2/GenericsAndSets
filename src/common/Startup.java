@@ -110,8 +110,8 @@ public class Startup {
         Map<String, Employee> employeeMap = new HashMap<String, Employee>();
         
         //Add the employee objects to the map using the String 'ssn' as the key
-        //Because the HashMap by default does not allow duplicate keys, the last employee added here
-        //will not be added to the HashMap
+        //The HashMap by default does not allow duplicate keys, therefore the last employee added here
+        //will replace the employee e2 which will be removed
         
         employeeMap.put("391-47-7415", e1);
         employeeMap.put("962-55-7887", e2);
@@ -120,7 +120,7 @@ public class Startup {
         
         //Demonstrates how to retrieve an item from the map using that item's unique identifier or key in this case
         //the ssn
-        System.out.println(employeeMap.get("447-01-2147").toString());
+        System.out.println("The selected employee is: \n" + employeeMap.get(e1.getSsn()).toString());
         
         //This creates a set of the employeeMap's unique keys using the keySet() function in the Map class.
         //The set is then looped through and the object's values may be printed out to the console.

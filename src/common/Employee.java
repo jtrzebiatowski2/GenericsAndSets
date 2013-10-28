@@ -98,7 +98,7 @@ public class Employee implements Comparable, Comparator {
 
     @Override
     public String toString() {
-        return "Employee{" + "lastName=" + lastName + ", firstName=" + firstName + ", ssn=" + ssn + '}';
+        return "Empoyee Last Name: " + lastName + "\nFirst Name: " + firstName + "\nSocial Security Number: " + ssn + '\n';
     }
 
     @Override
