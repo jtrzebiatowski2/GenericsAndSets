@@ -4,38 +4,72 @@ import java.util.*;
 import org.apache.commons.lang3.builder.CompareToBuilder;
 
 
+/**
+ *
+ * @author J-Tron
+ */
 public class Employee implements Comparable, Comparator {
     private String lastName;
     private String firstName;
     private String ssn;
 
+    /**
+     *
+     * @param firstName
+     * @param lastName
+     * @param ssn
+     */
     public Employee(String firstName, String lastName, String ssn) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.ssn = ssn;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getSsn() {
         return ssn;
     }
 
+    /**
+     *
+     * @param ssn
+     */
     public void setSsn(String ssn) {
         this.ssn = ssn;
     }
 
 
+    /**
+     *
+     * @return
+     */
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     *
+     * @param firstName
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getLastName() {
         return lastName;
     }
 
+    /**
+     *
+     * @param lastName
+     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
